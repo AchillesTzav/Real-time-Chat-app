@@ -1,0 +1,18 @@
+<nav class=" font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full"> 
+  <div class="mb-2 sm:mb-0">
+    <a href="#" class="text-lg no-underline text-grey-darkest hover:text-blue-dark">Chatroom</a>
+    <a href="#" class="text-lg no-underline text-grey-darkest hover:text-blue-dark">Messages</a>
+  </div>
+      
+  <!-- Dropdown Menu -->
+  <div data-controller="dropdown">
+    <button data-action="click->dropdown#toggle" class=" text-black px-4 py-2 rounded">
+      Account
+    </button>
+    <div data-dropdown-target="menu" class="hidden absolute bg-white shadow-md rounded mt-2">
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Log In</a>
+      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Log Out</a>
+        </div>
+    <button class="rounded bg-blue-400 text-white p-2">SignUp</button>
+  </div>
+</nav>
