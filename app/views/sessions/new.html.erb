@@ -1,3 +1,24 @@
-<h1 class="text-3xl font-bold underline">
-    You have reached the login page
-</h1>
+<div class="flex items-center justify-center ">
+  <div class="p-8 bg-black rounded-full rounded-lg shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 " >
+    <%= image_tag 'favicon.ico' %>
+  </div>
+</div>
+<div class="flex items-center justify-center pt-2">
+    <p class="italic  text-2xl">Make a coffee, take a sip... start a war!</p>
+</div>
+
+<div data-controller="toggle-form" class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to chat</h2>
+  </div>
+
+  <%= render 'sessions/login_form' %>
+
+  <%= render 'sessions/register_form' %>
+  
+</div>
+<style>
+    .hidden {
+  display: none;
+}
+</style>
