@@ -10,9 +10,15 @@
       Account
     </button>
     <div data-dropdown-target="menu" class="hidden absolute bg-white shadow-md rounded mt-2">
-      <a href="/login"  class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Log In</a>
-      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Log Out</a>
-        </div>
-    <button class="rounded bg-blue-400 text-white p-2">SignUp</button>
+      <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: :delete, class: "block px-4 py-2 text-gray-800 hover:bg-gray-200"%>
+      <% else %>
+        <%= link_to "Log in", login_path, class: "block px-4 py-2 text-gray-800 hover:bg-gray-200" %>
+      <% end%>
+    </div>
+    <% if !logged_in? %>
+      <%= link_to "Log Up", login_path, class: "rounded bg-blue-400 text-white p-2" %>
+      
+    <% end %>
   </div>
 </nav>
